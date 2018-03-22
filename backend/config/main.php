@@ -1,7 +1,8 @@
 <?php
 defined('APP_ROOT') or define('APP_ROOT', dirname(__DIR__));
 defined('BREST_BACKEND_THEME_HUI') or define('BREST_BACKEND_THEME_HUI', 'hui');
-defined('IMAGE_SITE') or define('IMAGE_SITE', 'http://brest-image.tunnel.echomod.cn');
+//defined('IMAGE_SITE') or define('IMAGE_SITE', 'http://brest-image.tunnel.echomod.cn');
+defined('IMAGE_SITE') or define('IMAGE_SITE', 'http://brest-image.brest-china.com');
 
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
