@@ -17,10 +17,10 @@ $ext = str_replace('.','',strrchr($gb_filename,'.'));
 $dir_base = "../../images/upload/";
 //图片命名
 $save_name = time() . "." . $ext;
-$childpath = date("Y/m");
-$returnpath = date("Y/m") . "/" . $save_name;
+//$childpath = date("Y/m");
+//$returnpath = date("Y/m") . "/" . $save_name;
 
-if (!file_exists($dir_base.$childpath)) {
+if (!file_exists($dir_base)) {
     mkdir($dir_base, '0777', true);
 }
 
@@ -40,6 +40,6 @@ if (!file_exists($dir_base . $save_name)) {
     $isMoved = true;
 }
 if ($isMoved) {
-    echo $returnpath;
+    echo $save_name;
 }
 ?>
