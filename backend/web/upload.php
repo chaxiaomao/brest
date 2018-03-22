@@ -5,11 +5,7 @@
  * Date: 2018/3/17
  * Time: 14:23
  */
-//文件上传根目录
-$dir_base = "../../images/upload/" . date("Y/m") . "/";
-if (!file_exists($dir_base)) {
-    mkdir($dir_base, '0777', true);
-}
+
 //对应FomData中的文件命名
 $upload_file_name = 'imgFile';
 $filename = $_FILES[$upload_file_name]['name'];
@@ -17,8 +13,19 @@ $filename = $_FILES[$upload_file_name]['name'];
 $gb_filename = iconv('utf-8', 'gb2312', $filename);
 //获取后缀格式
 $ext = end(explode(".", $gb_filename));
+
+//文件上传根目录
+$dir_base = "../../images/upload/";
 //图片命名
 $save_name = time() . "." . $ext;
+$childpath = date("Y/m");
+$returnpath = date("Y/m") . "/" . $save_name;
+
+if (!file_exists($dir_base.$childpath)) {
+    mkdir($dir_base, '0777', true);
+}
+
+
 if (!file_exists($dir_base . $save_name)) {
     $isMoved = false;  //默认上传失败
     //文件大小限制    1M = 1 * 1024 * 1024 B;
@@ -34,6 +41,6 @@ if (!file_exists($dir_base . $save_name)) {
     $isMoved = true;
 }
 if ($isMoved) {
-    echo date("Y/m") . "/" . $save_name;
+    echo $returnpath;
 }
 ?>

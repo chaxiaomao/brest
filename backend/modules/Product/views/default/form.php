@@ -76,7 +76,7 @@ position:absolute;bottom:0;}");
         </div>
 
         <?php \yii\widgets\ActiveForm::end() ?>
-        <?php else:?>
+    <?php else:?>
         <?php
         $form = \yii\widgets\ActiveForm::begin([
             'options' => [
@@ -191,6 +191,7 @@ position:absolute;bottom:0;}");
             processData: false,         /*不可缺*/
             success:function(data){
                 if (data) {
+//                    $("#cover_path").val('<?//= IMAGE_SITE."/" ?>//'+data);
                     $("#cover_path").val('<?= IMAGE_SITE."/" ?>'+data);
                     $("#upload_tip").text("上传成功");
                 }

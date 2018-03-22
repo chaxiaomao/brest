@@ -10,6 +10,7 @@ use common\models\entity\Category;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 
 
 /**
