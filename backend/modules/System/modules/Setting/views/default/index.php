@@ -5,6 +5,9 @@
  * Date: 2018/3/18
  * Time: 10:59
  */
+
+use common\tools\Setting;
+
 $cache = \Yii::$app->cache;
 if ($cache->exists('setting')) {
     $setting = $cache->get('setting');
@@ -45,7 +48,7 @@ if ($cache->exists('setting')) {
                         <span class="c-red">*</span>
                         网站名称：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_name" placeholder="控制在25个字、50个字节以内" value="<?= $setting['site_name'] ?>" class="input-text">
+                        <input type="text" name="site_name" placeholder="控制在25个字、50个字节以内" value="<?=  Setting::getSetting()->site_name ?>" class="input-text">
                     </div>
                 </div>
                 <div class="row cl">
@@ -53,7 +56,7 @@ if ($cache->exists('setting')) {
                         <span class="c-red">*</span>
                         关键词：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?= $setting['site_keywords'] ?>"
+                        <input type="text" name="site_keywords" placeholder="5个左右,8汉字以内,用英文,隔开" value="<?= Setting::getSetting()->site_keywords ?>"
                                class="input-text">
 
                     </div>
@@ -63,7 +66,7 @@ if ($cache->exists('setting')) {
                         <span class="c-red">*</span>
                         描述：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_description" placeholder="空制在80个汉字，160个字符以内" value="<?= $setting['site_description'] ?>"
+                        <input type="text" name="site_description" placeholder="空制在80个汉字，160个字符以内" value="<?= Setting::getSetting()->site_description ?>"
                                class="input-text">
 
                     </div>
@@ -73,28 +76,28 @@ if ($cache->exists('setting')) {
                         <span class="c-red">*</span>
                         底部版权信息：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_copyright" placeholder="&copy; 2016 Brest" value="<?= $setting['site_copyright'] ?>"
+                        <input type="text" name="site_copyright" placeholder="&copy; 2016 Brest" value="<?= Setting::getSetting()->site_copyright ?>"
                                class="input-text">
                     </div>
                 </div>
                 <div class="row cl">
                     <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>备案号：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_ipc" placeholder="京ICP备00000000号" value="<?= $setting['site_ipc'] ?>" class="input-text">
+                        <input type="text" name="site_ipc" placeholder="京ICP备00000000号" value="<?= Setting::getSetting()->site_ipc ?>" class="input-text">
 
                     </div>
                 </div>
                 <div class="row cl">
                     <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>网站邮箱：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_email" placeholder="brest@136.com" value="<?= $setting['site_email'] ?>" class="input-text">
+                        <input type="text" name="site_email" placeholder="brest@136.com" value="<?= Setting::getSetting()->site_email ?>" class="input-text">
 
                     </div>
                 </div>
                 <div class="row cl">
                     <label class="form-label col-xs-4 col-sm-2">统计代码：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <textarea name="site_statistics_code" class="textarea"><?= $setting['site_statistics_code'] ?></textarea>
+                        <textarea name="site_statistics_code" class="textarea"><?= Setting::getSetting()->site_statistics_code ?></textarea>
                     </div>
                 </div>
             </div>
