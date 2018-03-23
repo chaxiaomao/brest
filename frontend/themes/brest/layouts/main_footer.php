@@ -45,4 +45,4 @@ $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}")
         </li>
     </ul>
 </div>
-<div class="bq"><?= Setting::getSetting()->site_copyright ?> E-mail: <?= Setting::getSetting()->site_email ?> IPC <a class="link" href=""><?= Setting::getSetting()->site_ipc ?></a></div>
+<div class="bq"><?= Setting::getSetting()->site_copyright ?> E-mail: <?= Setting::getSetting()->site_email ?></a></div>
