@@ -29,9 +29,9 @@ $this->title = "Contact us";
         </div>
     </div>
     <div class="about">
-        <p>Contact way</p>
-        <p>location:广东省中山市黄圃镇大岑工业区成业大道尾101号中山市布雷斯特电器有限公司.</p>
-        <p>Tel:0760-23309133/0760-23309136.</p>
+        <p>location：广东省中山市黄圃镇大岑工业区成业大道尾101号中山市布雷斯特电器有限公司</p>
+        <p>Tel：0760-23309133/0760-23309136</p>
+        <p>E-mail：candice@brest-china.com</p>
     </div>
 </div>
 
