@@ -32,7 +32,7 @@ $this->registerCss("a:link{text-decoration:none;}a:hover{text-decoration:none;}"
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body style="background-color: black">
     <?php $this->beginBody() ?>
     <?=
         $this->render("main_header.php", [])

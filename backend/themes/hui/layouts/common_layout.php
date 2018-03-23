@@ -22,7 +22,7 @@ use yii\helpers\Html;
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body style="background-color: black">
+    <body>
     <?php $this->beginBody() ?>
     <?= $this->render("header_layout",[]) ?>
     <?= $this->render("menu_layout",[]) ?>
