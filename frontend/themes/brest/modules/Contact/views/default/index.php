@@ -29,9 +29,9 @@ $this->title = "Contact us";
         </div>
     </div>
     <div class="about">
-        <p>location and the specified location</p>
-        <p>Returns the text between the current location and the specified location.</p>
-        <p>Returns the text between the current location and the specified location.</p>
+        <p>Contact way</p>
+        <p>location:广东省中山市黄圃镇大岑工业区成业大道尾101号中山市布雷斯特电器有限公司.</p>
+        <p>Tel:0760-23309133/0760-23309136.</p>
     </div>
 </div>
 
@@ -46,8 +46,8 @@ $this->title = "Contact us";
     //创建地图函数：
     function createMap(){
         var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(116.395645,39.929986);//定义一个中心点坐标
-        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+        var point = new BMap.Point(113.361459,22.764122);//定义一个中心点坐标
+        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
         window.map = map;//将map变量存储在全局
     }
 
