@@ -29,7 +29,7 @@ $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}")
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="<?= CHAT_ROOM_SITE ?>" target="_blank">
                 <span><?= Yii::t("app.t2", "Online service") ?></span>
             </a>
         </li>

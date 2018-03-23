@@ -39,7 +39,7 @@
             <dd>
                 <ul>
                     <li><a data-href="/system/setting" data-title="基本设置" href="javascript:void(0)">基本设置</a></li>
-                    <li><a data-href="/system/log" data-title="系统日志" href="javascript:void(0)">系统日志</a></li>
+                    <li><a data-href="/system/tourists/default" data-title="在线游客" href="javascript:void(0)">在线游客</a></li>
                 </ul>
             </dd>
         </dl>

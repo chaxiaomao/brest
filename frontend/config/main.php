@@ -1,5 +1,7 @@
 <?php
 defined('BREST_FRONTEND_THEME') or define('BREST_FRONTEND_THEME', 'brest');
+defined('CHAT_ROOM_SITE') or define('CHAT_ROOM_SITE', 'http://socket.brest-china.com:55151/');
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/params.php'
