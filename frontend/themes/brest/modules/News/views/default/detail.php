@@ -8,7 +8,8 @@
 
 
 $this->title = $model->title;
-$this->registerCSs(".scd_m .scd_ml{width:100%;padding:0;border:none;}")
+$this->registerCSs(".scd_m .scd_ml{width:100%;padding:0;border:none;}
+.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}")
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">
