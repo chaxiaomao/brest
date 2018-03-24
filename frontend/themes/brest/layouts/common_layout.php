@@ -28,6 +28,7 @@ $this->registerCss("a:link{text-decoration:none;}a:hover{text-decoration:none;}"
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="x5-orientation" content="portrait">
     <?= Setting::getSetting()->site_statistics_code ?>
+    <link type="image/x-icon" href="/brest.ico" rel="shortcut icon">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
