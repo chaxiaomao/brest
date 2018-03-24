@@ -9,13 +9,13 @@
 use yii\helpers\Html;
 
 $this->title = 'Requirement';
-$this->registerCss(".book li .title{text-align:right;}")
+$this->registerCss(".book li .title{text-align:right;}.title{color:gray;}")
 ?>
 <div class="banner banner_s">
     <div class="join clearfix">
         <ul class="book">
             <li class="clearfix">
-                <p><?= Yii::t('app.t2', 'Thanks for leaving your requirement for us') ?></p>
+                <p style="color:gray;"><?= Yii::t('app.t2', 'Thanks for leaving your requirement for us') ?></p>
             </li>
             <?php
             $form = \yii\widgets\ActiveForm::begin([
@@ -44,7 +44,7 @@ $this->registerCss(".book li .title{text-align:right;}")
             <li class="clearfix">
                 <span class="title">&nbsp;</span>
                 <div class="li_r">
-                    <?= Html::submitInput('保存', ['name' => 'submit-button']) ?>
+                    <?= Html::submitInput(Yii::t('app.t2', 'Save'), ['name' => 'submit-button']) ?>
                 </div>
             </li>
             <?php \yii\widgets\ActiveForm::end() ?>

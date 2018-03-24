@@ -6,7 +6,8 @@
  * Time: 10:43
  */
 $this->title = "News";
-$this->registerCss(".w100{width:100% !important;} .w100 p{text-indent:2em}.pages a{height:34px;}")
+$this->registerCss(".w100{width:100% !important;} .w100 p{text-indent:2em}.pages a{height:34px;}
+.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}")
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">

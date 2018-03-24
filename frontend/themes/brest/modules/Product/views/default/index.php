@@ -11,7 +11,7 @@ use frontend\themes\brest\AppAsset;
 $this->title = "Products";
 $assets = AppAsset::register($this);
 $this->registerCss(".des{padding-top:10px;padding-bottom:10px;text-align:center} .pdt a{width:100%;height:280px} .pdt a img{width: 200px;height:200px;}
-.pages a{height:34px;}")
+.pages a{height:34px;}.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}")
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">

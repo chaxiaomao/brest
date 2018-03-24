@@ -10,7 +10,8 @@ use frontend\themes\brest\AppAsset;
 
 $assets = AppAsset::register($this);
 $this->title = $model->label;
-$this->registerCss(".mainPhoto .go li .tu, .mainPhoto .go li .tu img{height:100%}");
+$this->registerCss(".mainPhoto .go li .tu, .mainPhoto .go li .tu img{height:100%}
+.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}");
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">

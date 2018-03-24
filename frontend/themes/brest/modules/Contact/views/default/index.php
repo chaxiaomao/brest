@@ -5,17 +5,24 @@
  * Date: 2018/3/15
  * Time: 10:43
  */
+
+use yii\web\View;
+
 $this->registerCss("html,body{margin:0;padding:0;}
     .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
     .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-    .about p{color: gray;}");
+    .about p{color: gray;}.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}");
 $this->title = "Contact us";
+//$this->registerJsFile("http://api.map.baidu.com/api?v=2.0&ak=UX6M0k7yeOSB22nMMdXzemvqIWlK7BYm");
 ?>
-<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UX6M0k7yeOSB22nMMdXzemvqIWlK7BYm"></script>
 
 <!--百度地图容器-->
-<div class="banner banner_s">
-    <div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+<!--百度地图容器-->
+<div style="width: 100%;">
+    <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px;margin: 0 auto" id="map"></div>
+
 </div>
 
 <!--公司简介-->
@@ -30,49 +37,64 @@ $this->title = "Contact us";
         </div>
     </div>
     <div class="about">
-        <p>location：广东省中山市黄圃镇大岑工业区成业大道尾101号中山市布雷斯特电器有限公司</p>
+        <p>location：Brest Electrical Appliances Co., Ltd
+            Address:No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</p>
         <p>Tel：0760-23309133/0760-23309136</p>
         <p>E-mail：candice@brest-china.com</p>
     </div>
 </div>
-
 <script type="text/javascript">
     //创建和初始化地图函数：
     function initMap(){
         createMap();//创建地图
         setMapEvent();//设置地图事件
         addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
     }
-
-    //创建地图函数：
     function createMap(){
-        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-        var point = new BMap.Point(113.361459,22.764122);//定义一个中心点坐标
-        map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
-        window.map = map;//将map变量存储在全局
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(113.361459,22.764122),18);
     }
-
-    //地图事件设置函数：
     function setMapEvent(){
-        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
-        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
-        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
-        map.enableKeyboard();//启用键盘上下左右键移动地图
+        map.enableKeyboard();
+        map.enableDoubleClickZoom()
     }
-
-    //地图控件添加函数：
+    function addClickHandler(target,window){
+        target.addEventListener("click",function(){
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay(){
+        var markers = [
+            {content:"我的备注",title:"Brest",imageOffset: {width:0,height:3},position:{lat:22.763914,lng:113.361216}}
+        ];
+        for(var index = 0; index < markers.length; index++ ){
+            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+            var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+                imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+            })});
+            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+            marker.setLabel(label);
+            addClickHandler(marker,infoWindow);
+            map.addOverlay(marker);
+        };
+    }
+    //向地图添加控件
     function addMapControl(){
-        //向地图中添加缩放控件
-        var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-        map.addControl(ctrl_nav);
-        //向地图中添加缩略图控件
-        var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-        map.addControl(ctrl_ove);
-        //向地图中添加比例尺控件
-        var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-        map.addControl(ctrl_sca);
+        var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+        map.addControl(overviewControl);
     }
-
-
-    initMap();//创建和初始化地图
+    var map;
+    initMap();
 </script>
