@@ -15,15 +15,15 @@ $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}
 $assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
 <div class="space_hx">&nbsp;</div>
-<div class="friend">
-    <div class="b_head"><span><?= Yii::t("app.t2", "Friend link") ?></span></div>
-    <div class="frd_m">
-        <a href="">Baidu</a>
-        <a href="">Alia</a>
-        <a href="">Google</a>
-        <a href="">Sina</a>
-    </div>
-</div>
+<!--<div class="friend">-->
+<!--    <div class="b_head"><span>--><?//= Yii::t("app.t2", "Friend link") ?><!--</span></div>-->
+<!--    <div class="frd_m">-->
+<!--        <a href="">Baidu</a>-->
+<!--        <a href="">Alia</a>-->
+<!--        <a href="">Google</a>-->
+<!--        <a href="">Sina</a>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="fn_bg">
     <ul class="f_nav clearfix">
         <li>

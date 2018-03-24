@@ -6,7 +6,8 @@
  * Time: 21:58
  */
 $theme = $this->theme;
-$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;}.tel{text-align:right;color:gray;font-size:12px;}");
+$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;}
+.tel{text-align:right;color:gray;font-size:12px;margin-top:10px;}");
 $assets = \frontend\themes\brest\AppAsset::register($this);
 $categories = \common\models\entity\Category::find()->all();
 ?>
