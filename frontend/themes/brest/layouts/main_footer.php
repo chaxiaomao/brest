@@ -27,7 +27,7 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
 <div class="fn_bg">
     <ul class="f_nav clearfix">
         <li>
-            <a href="">
+            <a href="javascript:;">
                 <span><?= Yii::t("app.t2", "Share website") ?></span>
             </a>
         </li>
@@ -37,12 +37,12 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="javascript:;">
                 <span><?= Yii::t("app.t2", "More") ?></span>
             </a>
         </li>
         <li id="follow" style="position: relative;">
-            <a href="">
+            <a href="javascript:;">
                 <span><?= Yii::t("app.t2", "Follow us") ?></span>
             </a>
             <img id="qr" class="qr" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>">
