@@ -9,8 +9,8 @@ return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=brest_dev;port=3306',
     'username' => 'root',
-    'password' => '',
-//    'password' => 'root',
+//    'password' => '',
+    'password' => 'root',
     'charset' => 'utf8',
     'tablePrefix' => 'br_',
 ];
