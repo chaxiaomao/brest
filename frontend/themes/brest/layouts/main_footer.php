@@ -9,7 +9,10 @@
 use common\tools\Setting;
 
 $theme = $this->theme;
-$this->registerCss(".link{color:#37c6c0;text-decoration:underline;}")
+$this->registerCss(".link{color:#37c6c0;text-decoration:underline;}
+.qr{position: absolute;top: -90px;left: 20px;width: 100px !important;height: 100px !important;display:none;}
+");
+$assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="friend">
@@ -35,14 +38,27 @@ $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}")
         </li>
         <li>
             <a href="">
-                <span><?= Yii::t("app.t2", "Follow us") ?></span>
-            </a>
-        </li>
-        <li>
-            <a href="">
                 <span><?= Yii::t("app.t2", "More") ?></span>
             </a>
+        </li>
+        <li id="follow" style="position: relative;">
+            <a href="">
+                <span><?= Yii::t("app.t2", "Follow us") ?></span>
+            </a>
+            <img id="qr" class="qr" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>">
         </li>
     </ul>
 </div>
 <div class="bq"><?= Setting::getSetting()->site_copyright ?> E-mail: <?= Setting::getSetting()->site_email ?></a></div>
+<script type="text/javascript">
+    $("#follow").on("mouseover mouseout",function(event){
+        if(event.type == "mouseover"){
+            //鼠标悬浮
+            $("#qr").show();
+        }else if(event.type == "mouseout"){
+            //鼠标离开
+            $("#qr").hide();
+
+        }
+    })
+</script>
