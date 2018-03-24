@@ -12,7 +12,7 @@ $theme = $this->theme;
 $this->title = Setting::getSetting()->site_name;
 $this->registerCss(".des{padding-top:10px;padding-bottom:10px;text-align:center} 
 .pdt a{width:100%;height:280px} .pdt a img{width: 200px;height:200px;}
-.i_name,.b_head span{color:gray !important;}")
+.i_name,.b_head span{color:gray !important;}.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}")
 ?>
 
 <!--幻灯片-->
