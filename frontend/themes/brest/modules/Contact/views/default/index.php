@@ -13,12 +13,9 @@ $this->registerCss("html,body{margin:0;padding:0;}
     .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
     .about p{color: gray;}.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}");
 $this->title = "Contact us";
-//$this->registerJsFile("http://api.map.baidu.com/api?v=2.0&ak=UX6M0k7yeOSB22nMMdXzemvqIWlK7BYm");
 ?>
-<!--<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>-->
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UX6M0k7yeOSB22nMMdXzemvqIWlK7BYm"></script>
 
-<!--百度地图容器-->
 <!--百度地图容器-->
 <div style="width: 100%;">
     <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px;margin: 0 auto" id="map"></div>
@@ -37,8 +34,7 @@ $this->title = "Contact us";
         </div>
     </div>
     <div class="about">
-        <p>location：Brest Electrical Appliances Co., Ltd
-            Address:No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</p>
+        <p>Brest Electrical Appliances Co.,Ltd &nbsp;Address：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</p>
         <p>Tel：0760-23309133/0760-23309136</p>
         <p>E-mail：candice@brest-china.com</p>
     </div>
