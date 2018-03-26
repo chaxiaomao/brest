@@ -11,7 +11,7 @@ use common\tools\Setting;
 $theme = $this->theme;
 $this->title = Setting::getSetting()->site_name;
 $this->registerCss(".des{padding-top:10px;padding-bottom:10px;text-align:center} 
-.pdt a{width:100%;height:280px} .pdt a img{width: 200px;height:200px;}
+.pdt a{width:100%;} .pdt a img{width: 200px;height:150px;}
 .i_name,.b_head span{color:gray !important;}.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}")
 ?>
 
@@ -57,8 +57,8 @@ $this->registerCss(".des{padding-top:10px;padding-bottom:10px;text-align:center}
             <div class="tabCont" style="display:block;text-align: center;">
 <!--                width="720" height="560"-->
 <!--                <iframe height=498 width=510 src='http://player.youku.com/embed/XMzQ3NjYyODQzMg==' frameborder=0 'allowfullscreen'></iframe>-->
-                <embed id="video" src="http://player.youku.com/player.php/sid/XMzQ3NjYyODQzMg==/v.swf" quality="high" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
-
+<!--                <embed  src="http://player.youku.com/player.php/sid/XMzQ3NjYyODQzMg==/v.swf" quality="high" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>-->
+                <iframe id="video" height=498 width=510 src='http://player.youku.com/embed/XMzQ3NjYyODQzMg==' frameborder=0 'allowfullscreen'></iframe>
             </div>
         </div>
     </div>

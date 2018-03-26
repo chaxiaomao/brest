@@ -45,20 +45,19 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
             <a href="javascript:;">
                 <span><?= Yii::t("app.t2", "Follow us") ?></span>
             </a>
-            <img id="qr" class="qr" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>">
         </li>
     </ul>
 </div>
 <div class="bq"><?= Setting::getSetting()->site_copyright ?> E-mail: <?= Setting::getSetting()->site_email ?></a></div>
 <script type="text/javascript">
-    $("#follow").on("mouseover mouseout",function(event){
-        if(event.type == "mouseover"){
-            //鼠标悬浮
-            $("#qr").show();
-        }else if(event.type == "mouseout"){
-            //鼠标离开
-            $("#qr").hide();
-
-        }
-    })
+//    $("#follow").on("mouseover mouseout",function(event){
+//        if(event.type == "mouseover"){
+//            //鼠标悬浮
+//            $("#qr").show();
+//        }else if(event.type == "mouseout"){
+//            //鼠标离开
+//            $("#qr").hide();
+//
+//        }
+//    })
 </script>

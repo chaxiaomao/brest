@@ -28,13 +28,14 @@ $this->title = "Contact us";
     <div class="scd_top">
         <div class="s_nav">
             <a href="javascript:void(0)" class="active"><span><?= Yii::t("app.t2", "Company summary") ?></span></a>
-        </div>
+        </div>c
         <div class="pst">
             <?= Yii::t("app.t2", "Current:") ?> <a href="/"><?= Yii::t("app.t2", "Home") ?></a> / <a href="javascript:void(0)"><?= Yii::t("app.t2", "Contact us") ?></a>
         </div>
     </div>
     <div class="about">
-        <p>Brest Electrical Appliances Co.,Ltd &nbsp;Address：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</p>
+        <p>Brest Electrical Appliances Co.,Ltd</p>
+        <p>Address：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</p>
         <p>Tel：0760-23309133/0760-23309136</p>
         <p>E-mail：candice@brest-china.com</p>
     </div>

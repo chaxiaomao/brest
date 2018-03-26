@@ -19,9 +19,6 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
         <a class="item" target="_blank" href="" style="background-image:url(/assets/9afad1a2/upload/banner.jpg)">
             <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>" alt="">
         </a>
-        <a class="item" target="_blank" href="" style="background-image:url(/assets/9afad1a2/upload/banner.jpg)">
-            <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>" alt="">
-        </a>
     </div>
 </div>
 
