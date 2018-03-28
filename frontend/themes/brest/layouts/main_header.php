@@ -6,16 +6,19 @@
  * Time: 21:58
  */
 $theme = $this->theme;
-$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;}
-.tel{text-align:right;color:gray;font-size:12px;margin-top:10px;position:relative}
-.qr_top_right{width:60px;height: 60px;}");
 $assets = \frontend\themes\brest\AppAsset::register($this);
 $categories = \common\models\entity\Category::find()->all();
+
+$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;}
+.tel{text-align:right;color:black;font-size:12px;margin-top:10px;position:relative}
+.qr_top_right{width:60px;height: 60px;}.header{background:url($assets->baseUrl/images/home_bg_top.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;}.header .head{height:290px;}");
 ?>
 <!--头部-->
 <div class="header">
     <div class="head clearfix">
-        <div class="logo"><a href="/"><img src="<?= "$assets->baseUrl/images/logo.png" ?>" alt="公司名称"/></a></div>
         <div class="head_r clearfix">
             <div class="tel">Tel：0760-23309133/0760-23309136</div>
             <div style="float: right;"><img class="qr_top_right" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>" /></div>
