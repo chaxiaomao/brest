@@ -11,6 +11,7 @@ use common\tools\Setting;
 $theme = $this->theme;
 $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}
 .qr{position: absolute;top: -90px;left: 20px;width: 100px !important;height: 100px !important;display:none;}
+.bq{height:30px;line-height:30px;}
 ");
 $assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
@@ -48,7 +49,14 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
         </li>
     </ul>
 </div>
-<div class="bq"><?= Setting::getSetting()->site_copyright ?> E-mail: <?= Setting::getSetting()->site_email ?></a></div>
+<div class="bq"><?= Setting::getSetting()->site_copyright ?> </div>
+<div class="bq">E-mail:
+    <?php
+        foreach (explode("/" ,Setting::getSetting()->site_email) as $email) {
+            echo $email. " ";
+        }
+    ?>
+</div>
 <script type="text/javascript">
 //    $("#follow").on("mouseover mouseout",function(event){
 //        if(event.type == "mouseover"){

@@ -9,7 +9,7 @@ $theme = $this->theme;
 $assets = \frontend\themes\brest\AppAsset::register($this);
 $categories = \common\models\entity\Category::find()->all();
 
-$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;}
+$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;top:60px;}
 .tel{text-align:right;color:black;font-size:12px;margin-top:10px;position:relative}
 .qr_top_right{width:60px;height: 60px;}.header{background:url($assets->baseUrl/images/home_bg_top.png);
     background-repeat: no-repeat;
