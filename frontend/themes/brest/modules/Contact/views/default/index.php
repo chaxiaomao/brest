@@ -6,6 +6,7 @@
  * Time: 10:43
  */
 
+use common\tools\Setting;
 use yii\web\View;
 
 $this->registerCss("html,body{margin:0;padding:0;}
@@ -37,7 +38,11 @@ $this->title = "Contact us";
         <p>Brest Electrical Appliances Co.,Ltd</p>
         <p>Address：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</p>
         <p>Tel：0760-23309133/0760-23309136</p>
-        <p>E-mail：candice@brest-china.com</p>
+        <?php
+            foreach (explode("/" ,Setting::getSetting()->site_email) as $email) {
+                echo '<p>E-mail：'. $email .'</p>';
+            }
+        ?>
     </div>
 </div>
 <script type="text/javascript">

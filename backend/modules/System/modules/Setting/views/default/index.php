@@ -90,7 +90,7 @@ if ($cache->exists('setting')) {
                 <div class="row cl">
                     <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>网站邮箱：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" name="site_email" placeholder="brest@136.com" value="<?= Setting::getSetting()->site_email ?>" class="input-text">
+                        <input type="text" name="site_email" placeholder="多个邮箱用分割符号/隔开如：xx@126.com/xx@163.com" value="<?= Setting::getSetting()->site_email ?>" class="input-text">
 
                     </div>
                 </div>
