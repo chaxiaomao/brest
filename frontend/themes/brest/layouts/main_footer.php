@@ -11,7 +11,7 @@ use common\tools\Setting;
 $theme = $this->theme;
 $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}
 .qr{position: absolute;top: -90px;left: 20px;width: 100px !important;height: 100px !important;display:none;}
-.bq{height:30px;line-height:30px;}
+.bq{height:30px;line-height:30px;}.fn_bg .f_nav li span{color:#444;}.head .search input[type=\"text\"]{padding-left:10px;}
 ");
 $assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
@@ -34,7 +34,7 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
         </li>
         <li>
             <a href="<?= CHAT_ROOM_SITE ?>" target="_blank">
-                <span><?= Yii::t("app.t2", "Online service") ?></span>
+                <span style="color:#eee;"><?= Yii::t("app.t2", "Online service") ?></span>
             </a>
         </li>
         <li>

@@ -14,7 +14,8 @@ $this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{ba
 .qr_top_right{width:60px;height: 60px;}.header{background:url($assets->baseUrl/images/home_bg_top.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    -moz-background-size: 100% 100%;}.header .head{height:290px;}");
+    -moz-background-size: 100% 100%;}.header .head{height:290px;}.search{text-align:right;}
+    .ic-search{    vertical-align: middle;width: 16px;margin-right:5px;margin-bottom:4px;}");
 ?>
 <!--头部-->
 <div class="header">
@@ -37,8 +38,9 @@ $this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{ba
                     <li><a href="/news"><?= Yii::t('app.t2', 'News') ?></a></li>
                     <li>
                         <form action="/search" method="get" class="search">
-                            <input name="tag" type="text">
+                            <input name="tag" placeholder="Search" type="text">
                             <input name="" type="submit" value="">
+                            <img class="ic-search" src="<?= "$assets->baseUrl/images/ic_search.png" ?>">
                         </form>
                     </li>
                 </ul>

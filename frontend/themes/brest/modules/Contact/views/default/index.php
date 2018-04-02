@@ -55,11 +55,10 @@ $this->title = "Contact us";
     }
     function createMap(){
         map = new BMap.Map("map");
-        map.centerAndZoom(new BMap.Point(113.361459,22.764122),18);
+        map.centerAndZoom(new BMap.Point(113.36114,22.763998),18);
     }
     function setMapEvent(){
-        map.enableKeyboard();
-        map.enableDoubleClickZoom()
+        map.enableDragging();
     }
     function addClickHandler(target,window){
         target.addEventListener("click",function(){
@@ -68,7 +67,7 @@ $this->title = "Contact us";
     }
     function addMapOverlay(){
         var markers = [
-            {content:"我的备注",title:"Brest",imageOffset: {width:0,height:3},position:{lat:22.763914,lng:113.361216}}
+            {content:"Brest Electrical Appliances Co.,LtdAddress：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China",title:"",imageOffset: {width:0,height:3},position:{lat:22.763956,lng:113.361194}}
         ];
         for(var index = 0; index < markers.length; index++ ){
             var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
