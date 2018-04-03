@@ -67,7 +67,7 @@ $this->title = "Contact us";
     }
     function addMapOverlay(){
         var markers = [
-            {content:"Brest Electrical Appliances Co.,LtdAddress：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China",title:"",imageOffset: {width:0,height:3},position:{lat:22.763956,lng:113.361194}}
+            {content:"Brest Electrical Appliances Co.,Ltd</br>Address：No.101 Chengye Ave, Dacen Industrial Zone, Huangpu Town,Zhongshan, China</br>中山市布雷斯特电器有限公司</br>地址：广东省中山市黄圃镇大岑工业区成业大道尾101号",title:"",imageOffset: {width:0,height:3},position:{lat:22.763915,lng:113.361185}}
         ];
         for(var index = 0; index < markers.length; index++ ){
             var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);

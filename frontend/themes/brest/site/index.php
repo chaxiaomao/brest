@@ -55,10 +55,8 @@ $this->registerCss(".des{padding-top:10px;padding-bottom:10px;text-align:center}
     <div class="tabBox_t">
         <div class="tabBox">
             <div class="tabCont" style="display:block;text-align: center;">
-<!--                width="720" height="560"-->
-<!--                <iframe height=498 width=510 src='http://player.youku.com/embed/XMzQ3NjYyODQzMg==' frameborder=0 'allowfullscreen'></iframe>-->
-<!--                <embed  src="http://player.youku.com/player.php/sid/XMzQ3NjYyODQzMg==/v.swf" quality="high" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>-->
                 <iframe id="video" height=498 width=510 src='http://player.youku.com/embed/XMzQ3NjYyODQzMg==' frameborder=0 'allowfullscreen'></iframe>
+<!--                <iframe id="video"  src="http://www.haofangyuan.net/youku/videoyk.jsp?token=v&width=620&height=400&auto=no&id=XMzQ3NjYyODQzMg==" width="498" height="510" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>-->
             </div>
         </div>
     </div>

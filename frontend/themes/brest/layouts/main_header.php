@@ -8,25 +8,33 @@
 $theme = $this->theme;
 $assets = \frontend\themes\brest\AppAsset::register($this);
 $categories = \common\models\entity\Category::find()->all();
-
-$this->registerCss(".panel{width:580px;}.header{background:#000;}.nav_m .er_m{background:#eee;top:60px;}
+$css = '
+.panel{width:580px;}
+.header{background:#000;}
+.top-right{margin-right:60px;}
+.nav_m .er_m{background:#eee;top:60px;}
 .tel{text-align:right;color:black;font-size:12px;margin-top:10px;position:relative}
-.qr_top_right{width:60px;height: 60px;}.header{background:url($assets->baseUrl/images/home_bg_top.png);
+.qr_top_right{width:60px;height: 60px;}
+.header{
+    height:217px;
+    background:url('.$assets->baseUrl.'/images/home_bg_top.png);
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;}.header .head{height:290px;}.search{text-align:right;}
-    .ic-search{    vertical-align: middle;width: 16px;margin-right:5px;margin-bottom:4px;}");
+    background-size: 75% 100%;
+    -moz-background-size: 100% 100%;
+    }
+    .search{text-align:right;}
+    .ic-search{vertical-align: middle;width: 16px;margin-right:5px;margin-bottom:4px;}';
+$this->registerCss($css);
 ?>
 <!--头部-->
 <div class="header">
     <div class="head clearfix">
         <div class="head_r clearfix">
-            <div class="tel">Tel：0760-23309133/0760-23309136</div>
-            <div style="float: right;"><img class="qr_top_right" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>" /></div>
-<!--            <form action="/search" method="get" class="search">-->
-<!--                <input name="tag" type="text">-->
-<!--                <input name="" type="submit" value="">-->
-<!--            </form>-->
+            <div class="top-right">
+                <div class="tel">Tel：0760-23309133/0760-23309136</div>
+                <div style="float: right;"><img class="qr_top_right" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>" /></div>
+            </div>
             <div class="nav_m">
                 <div class="n_icon"><?= Yii::t('app.t2', 'Nav') ?></div>
                 <ul class="nav clearfix">

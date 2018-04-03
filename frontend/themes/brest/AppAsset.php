@@ -17,12 +17,14 @@ class AppAsset extends AssetBundle
         'css/reset.css',
         'css/thems.css',
         'css/responsive.css',
+        'css/swiper.min.css',
     ];
 
     public $js = [
         'js/jquery-1.8.3.min.js',
         'js/js_z.js',
-        'js/banner.js',
+//        'js/banner.js',
+        'js/swiper.min.js',
     ];
 
     public $depends = [
