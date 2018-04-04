@@ -49,12 +49,3 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
         }
     ?>
 </div>
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?7dd9def5876f2fabb9cc31c159c91183";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
