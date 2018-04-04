@@ -30,15 +30,15 @@ $this->registerCss("a:link{text-decoration:none;}a:hover{text-decoration:none;}"
     <link type="image/x-icon" href="/brest.ico" rel="shortcut icon">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?7dd9def5876f2fabb9cc31c159c91183";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+<!--    <script>-->
+<!--        var _hmt = _hmt || [];-->
+<!--        (function() {-->
+<!--            var hm = document.createElement("script");-->
+<!--            hm.src = "https://hm.baidu.com/hm.js?7dd9def5876f2fabb9cc31c159c91183";-->
+<!--            var s = document.getElementsByTagName("script")[0];-->
+<!--            s.parentNode.insertBefore(hm, s);-->
+<!--        })();-->
+<!--    </script>-->
     <?php $this->head() ?>
 </head>
 <body style="background-color: black">
