@@ -25,7 +25,7 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
             </a>
         </li>
         <li>
-            <a href="<?= CHAT_ROOM_SITE ?>" target="_blank">
+            <a href="http://p.qiao.baidu.com/cps/chat?siteId=11866849&userId=25420365" target="_blank">
                 <span style="color:#eee;"><?= Yii::t("app.t2", "Online service") ?></span>
             </a>
         </li>
