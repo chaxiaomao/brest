@@ -8,8 +8,17 @@
 
 
 $this->title = $model->title;
-$this->registerCSs(".scd_m .scd_ml{width:100%;padding:0;border:none;}
-.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}")
+$css = '
+.scd_m .scd_ml{width:100%;padding:0;border:none;}
+.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}
+.pdt-w,.pdt-title{width:1170px;margin:0 auto;}
+.pdt-w a{color:gray;font-size:24px;line-height:2;}
+.pdt-w a:hover{color:#F9A519;}
+.pdt-w img{width: 200px;height:200px;display:block;}
+.pdt-list{width:1100px;margin:0 auto;}
+.pdt-list li{display:inline-block;float:left;margin:10px;text-align:center;background:#fff;}';
+
+$this->registerCSs($css)
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">
@@ -23,6 +32,10 @@ $this->registerCSs(".scd_m .scd_ml{width:100%;padding:0;border:none;}
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="pdt-w">
+    <div class="pdt-list">
         <div class="scd_m clearfix">
             <div class="scd_ml">
                 <h1><?= $model->title ?></h1>
@@ -46,6 +59,6 @@ $this->registerCSs(".scd_m .scd_ml{width:100%;padding:0;border:none;}
                     </div>
                 </div>
             </div>
+        </div>
     </div>
-
 </div>

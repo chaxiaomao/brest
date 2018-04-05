@@ -10,14 +10,14 @@ use common\tools\Setting;
 
 $theme = $this->theme;
 $this->registerCss(".link{color:#37c6c0;text-decoration:underline;}
-.bq{height:30px;line-height:30px;}
+.bq{height:30px;line-height:30px;min-width:1170px;}
 .fn_bg .f_nav li span{color:#444;}
 .head .search input[type=\"text\"]{padding-left:10px;}
 ");
 $assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
 <div class="space_hx">&nbsp;</div>
-<div class="fn_bg">
+<div class="fn_bg" style="min-width:1170px;">
     <ul class="f_nav clearfix">
         <li>
             <a href="javascript:;">

@@ -6,10 +6,10 @@
  * Time: 10:43
  */
 $this->title = "About us";
-$this->registerCss(".w100{width:100% !important;margin-top:10px;} .w100 p{text-indent:2em}.about-us{width:100%;}");
+$this->registerCss(".container1170{width:1170px;}.w100{width:100% !important;margin-top:10px;} .w100 p{text-indent:2em}.about-us{width:100%;}");
 $assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
-    <div class="banner banner_s">
+    <div class="container1170">
         <div class="w100 panel panel-default">
             <div class="panel-body">
                 <p>BREST turns out to be a new leading OEM/ODM manufacturer of small electronic appliances. The Company is based in Zhongshan, Guangdong, China. At present, our products have covered but not limit to induction cooker, halogen cooker, stainless Jug Kettle,Contact Grill, exporting all over the world. covering 38 acres, 22000 squaremeters area, more than 8 million USD in assets investment, the annual output value is about 24 million USD. Our products have been certified by CB, CE, GS,ROHS, SAA, SASO, EMC， EMF， LVD， JQA, PSE,FCC,UL,ETL，ISO9000:2000 etc. BSCI certificated manufacturer.</p>

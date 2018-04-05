@@ -8,8 +8,10 @@
 $theme = $this->theme;
 $assets = \frontend\themes\brest\AppAsset::register($this);
 $css = '
+#banner{
+}
 .swiper-container {
-        width: 100%;
+        width: 1170px;
         height: 100%;
     }
     .swiper-slide {
@@ -34,28 +36,26 @@ $css = '
     .swiper-container-v {
         background: #eee;
     }
-    .banner img{width:95%;}';
+    .swiper-wrapper img{width:100%;}';
 $this->registerCss($css);
 ?>
 <!-- Swiper -->
-<div id="banner" class="banner">
-    <div class="swiper-container swiper-container-h">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="<?= "$assets->baseUrl/upload/BAN1.jpg" ?>" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= "$assets->baseUrl/upload/BAN2.jpg" ?>" alt="">
-
-            </div>
-            <div class="swiper-slide">
-                <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>" alt="">
-
-            </div>
+<div class="swiper-container swiper-container-h">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="<?= "$assets->baseUrl/upload/BAN1.jpg" ?>" alt="">
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-h"></div>
+        <div class="swiper-slide">
+            <img src="<?= "$assets->baseUrl/upload/BAN2.jpg" ?>" alt="">
+
+        </div>
+        <div class="swiper-slide">
+            <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>" alt="">
+
+        </div>
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-h"></div>
 </div>
 
 <!-- Initialize Swiper -->
