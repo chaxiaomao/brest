@@ -11,12 +11,6 @@ use frontend\themes\brest\AppAsset;
 $this->title = "Products";
 $assets = AppAsset::register($this);
 $css = '
-.pdt-w,.pdt-title{width:1170px;margin:0 auto;}
-.pdt-w a{color:gray;font-size:24px;line-height:2;}
-.pdt-w a:hover{color:#F9A519;}
-.pdt-w img{width: 200px;height:200px;display:block;}
-.pdt-list{width:1100px;margin:0 auto;}
-.pdt-list li{display:inline-block;float:left;margin:10px;text-align:center;background:#fff;}
 .des{padding-top:10px;padding-bottom:10px;text-align:center} .pdt a{width:100%;height:280px} .pdt a img{width: 200px;height:200px;}
 .pages a{height:34px;}.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}
 ';
