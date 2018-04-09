@@ -6,7 +6,13 @@
  * Time: 10:43
  */
 $this->title = "About us";
-$this->registerCss(".container1170{width:1170px;}.w100{width:100% !important;margin-top:10px;} .w100 p{text-indent:2em}.about-us{width:100%;}");
+$css = '
+.container1170{width:1170px;margin:0 auto;}
+.w100{width:100% !important;margin-top:10px;} 
+.w100 p{text-indent:2em}
+.about-us{width:100%;}
+';
+$this->registerCss($css);
 $assets = \frontend\themes\brest\AppAsset::register($this);
 ?>
     <div class="container1170">
