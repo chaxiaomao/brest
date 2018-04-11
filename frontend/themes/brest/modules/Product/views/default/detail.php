@@ -20,7 +20,7 @@ $this->registerCss(".mainPhoto .go li .tu, .mainPhoto .go li .tu img{height:100%
             <div class="scd_top">
                 <span><?= Yii::t('app.t2', 'Product overview') ?></span>
                 <div class="pst">
-                    <?= Yii::t('app.t2', 'Location') ?>：<a href="/"><?= Yii::t('app.t2', 'Home') ?></a> / <a href="/product"><?= Yii::t('app.t2', 'Product') ?></a> / <a href="javascript:;"><?= $model->label ?></a>
+                    <?= Yii::t('app.t2', 'Location') ?>：<a href="/"><?= Yii::t('app.t2', 'Home') ?></a> / <a href="/product"><?= Yii::t('app.t2', 'Product') ?></a> / <a style="float: right" href="javascript:;"><?= $model->label ?></a>
                 </div>
             </div>
             <div class="new_m">
