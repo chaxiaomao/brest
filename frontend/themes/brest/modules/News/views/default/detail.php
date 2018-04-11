@@ -28,7 +28,8 @@ $this->registerCSs($css)
                 <span><?= Yii::t('app.t2', 'Details') ?></span>
                 <div class="pst">
                     <?= Yii::t('app.t2', 'Location') ?>：<a href="/"><?= Yii::t('app.t2', 'Home') ?></a> / <a
-                            href="javascript:;"><?= Yii::t('app.t2', 'Details') ?></a>
+                            href="/news"><?= Yii::t('app.t2', 'News') ?></a>/ <a
+                            href="javascript:;"><?= Yii::t('app.t2', 'Detail') ?></a>
                 </div>
             </div>
         </div>
@@ -62,3 +63,11 @@ $this->registerCSs($css)
         </div>
     </div>
 </div>
+<?php
+$js='
+    $(document).ready(function() {
+        $("#news").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>

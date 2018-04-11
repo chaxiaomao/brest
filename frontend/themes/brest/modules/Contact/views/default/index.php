@@ -99,3 +99,11 @@ $this->title = "Contact us";
     var map;
     initMap();
 </script>
+<?php
+$js='
+    $(document).ready(function() {
+        $("#contact").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>

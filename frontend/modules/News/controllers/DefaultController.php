@@ -25,6 +25,7 @@ class DefaultController extends Controller
         $count = News::find()->count();
         $page = new Pagination(['totalCount' => $count, 'pageSize' => '8']);
         $model = News::find()
+            ->orderBy('created_at DESC')
             ->offset($page->offset)
             ->limit($page->limit)
             ->all();

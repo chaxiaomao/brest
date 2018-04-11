@@ -35,7 +35,7 @@ $css = '
     }
     .navbar li a {
         font-size: 12px;
-        color: #fff;
+        color: black;
         display: inline-block;
         zoom: 1;
         height: 17px;
@@ -61,12 +61,12 @@ $this->registerCss($css);
         <img class="qr_top_right" src="<?= "$assets->baseUrl/images/site_qrcode.jpg" ?>">
     </div>
     <ul class="navbar clearfix">
-        <li class="now"><a href="/"><?= Yii::t('app.t2', 'Home') ?></a></li>
-        <li id="category" class="er"><a href="/product"><?= Yii::t('app.t2', 'Products') ?></a></li>
-        <li><a href="/about-us"><?= Yii::t('app.t2', 'About us') ?></a></li>
-        <li><a href="/requirement"><?= Yii::t('app.t2', 'Sells and service') ?></a></li>
-        <li><a href="/contact-us"><?= Yii::t('app.t2', 'Contact us') ?></a></li>
-        <li><a href="/news"><?= Yii::t('app.t2', 'News') ?></a></li>
+        <li id="home"><a href="/"><?= Yii::t('app.t2', 'Home') ?></a></li>
+        <li id="product" class="er"><a href="/product"><?= Yii::t('app.t2', 'Products') ?></a></li>
+        <li id="about"><a href="/about-us"><?= Yii::t('app.t2', 'About us') ?></a></li>
+        <li id="requirement"><a href="/requirement"><?= Yii::t('app.t2', 'Sells and service') ?></a></li>
+        <li id="contact"><a href="/contact-us"><?= Yii::t('app.t2', 'Contact us') ?></a></li>
+        <li id="news"><a href="/news"><?= Yii::t('app.t2', 'News') ?></a></li>
         <li>
             <form action="/search" method="get" class="search">
                 <input name="tag" placeholder="Search" type="text">
@@ -96,7 +96,7 @@ $this->registerCss($css);
 <!--头部-->
 <script type="text/javascript">
     $(function () {
-        $("#category").hover(function () {
+        $("#product").hover(function () {
             $("#category_panel").show();
         });
         $("#category_panel").hover(function () {

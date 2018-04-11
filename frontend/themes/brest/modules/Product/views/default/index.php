@@ -55,3 +55,11 @@ $this->registerCss($css)
     ]);
     ?>
 </div>
+<?php
+$js='
+    $(document).ready(function() {
+        $("#product").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>

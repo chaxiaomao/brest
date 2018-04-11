@@ -15,3 +15,11 @@ $this->registerCss(".w100{width:100% !important;} .w100 p{text-indent:2em}")
         </div>
     </div>
 </div>
+<?php
+$js='
+    $(document).ready(function() {
+        $("#news").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>

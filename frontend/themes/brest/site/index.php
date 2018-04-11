@@ -82,6 +82,11 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
 </div>
 <!--宣传演示-->
 
-<script language="javascript">
-
-</script>
+<?php
+$js='
+    $(document).ready(function() {
+        $("#home").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>

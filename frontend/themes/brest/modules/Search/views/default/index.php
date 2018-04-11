@@ -47,3 +47,11 @@ $this->registerCss($css)
         <div style="clear: both"></div>
     </ul>
 </div>
+<?php
+$js='
+    $(document).ready(function() {
+        $("#product").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>

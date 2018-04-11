@@ -36,7 +36,7 @@ $css = '
     .swiper-container-v {
         background: #eee;
     }
-    .swiper-wrapper img{width:100%;}';
+    .swiper-wrapper img{width:100%;height:556px;}';
 $this->registerCss($css);
 ?>
 <!-- Swiper -->
@@ -51,7 +51,9 @@ $this->registerCss($css);
         </div>
         <div class="swiper-slide">
             <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>" alt="">
-
+        </div>
+        <div class="swiper-slide">
+            <img src="<?= "$assets->baseUrl/upload/BAN4.jpg" ?>" alt="">
         </div>
     </div>
     <!-- Add Pagination -->

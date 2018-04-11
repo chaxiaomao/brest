@@ -51,4 +51,11 @@ $this->registerCss(".book li .title{text-align:right;}.title{color:gray;}")
         </ul>
     </div>
 </div>
-
+<?php
+$js='
+    $(document).ready(function() {
+        $("#requirement").addClass("now");
+    });
+';
+$this->registerJs($js);
+?>
