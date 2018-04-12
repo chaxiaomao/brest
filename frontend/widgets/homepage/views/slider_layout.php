@@ -43,6 +43,9 @@ $this->registerCss($css);
 <div class="swiper-container swiper-container-h">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
+            <img src="<?= "$assets->baseUrl/upload/BAN4.jpg" ?>" alt="">
+        </div>
+        <div class="swiper-slide">
             <img src="<?= "$assets->baseUrl/upload/BAN1.jpg" ?>" alt="">
         </div>
         <div class="swiper-slide">
@@ -51,9 +54,6 @@ $this->registerCss($css);
         </div>
         <div class="swiper-slide">
             <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>" alt="">
-        </div>
-        <div class="swiper-slide">
-            <img src="<?= "$assets->baseUrl/upload/BAN4.jpg" ?>" alt="">
         </div>
     </div>
     <!-- Add Pagination -->
