@@ -68,19 +68,27 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
 <!--产品展示-->
 
 <!--宣传演示-->
-<div class="i_mbr i_ma">
-    <div class="b_head"><span><?= Yii::t("app.t2", "Campaign video") ?></span><?= Yii::t("app.t2", "Video") ?></div>
-    <div class="space_hx">&nbsp;</div>
-    <div class="tabBox_t">
-        <div class="tabBox">
-            <div class="tabCont" style="display:block;text-align: center;">
-                <iframe id="video" height=498 width=720 src='http://player.youku.com/embed/XMzQ3NjYyODQzMg==' frameborder=0 'allowfullscreen'></iframe>
-<!--                <iframe id="video"  src="http://www.haofangyuan.net/youku/videoyk.jsp?token=v&width=620&height=400&auto=no&id=XMzQ3NjYyODQzMg==" width="498" height="510" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>-->
+<div class="pdt-w">
+    <div class="i_mbr i_ma">
+        <div class="b_head"><span><?= Yii::t("app.t2", "Campaign video") ?></span><?= Yii::t("app.t2", "Video") ?></div>
+        <div class="space_hx">&nbsp;</div>
+        <div class="tabBox_t">
+            <div class="tabBox">
+                <div class="tabCont" style="display:block;text-align: center;">
+                    <iframe id="video" height=498 width=720 src='http://player.youku.com/embed/XMzQ3NjYyODQzMg==' frameborder=0 'allowfullscreen'></iframe>
+                    <!--                <iframe id="video"  src="http://www.haofangyuan.net/youku/videoyk.jsp?token=v&width=620&height=400&auto=no&id=XMzQ3NjYyODQzMg==" width="498" height="510" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>-->
+                </div>
             </div>
         </div>
     </div>
 </div>
 <!--宣传演示-->
+
+<!-- 图标-->
+<div class="pdt-w">
+    <img style="width:100%;" src="<?= "$assets->baseUrl/images/contact_img_7.jpg" ?>" />
+</div>
+<!--图标-->
 
 <?php
 $js='
