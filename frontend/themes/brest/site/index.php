@@ -40,6 +40,12 @@ $assets = \frontend\themes\brest\AppAsset::register($this);
 <?= \frontend\widgets\homepage\SliderWidget::widget([]) ?>
 <!--幻灯片-->
 
+<!-- 图标-->
+<div class="pdt-w">
+    <img style="width:100%;" src="<?= "$assets->baseUrl/images/home_img_1.jpg" ?>" />
+</div>
+<!--图标-->
+
 <!--产品展示-->
 <div class="space_hx">&nbsp;</div>
 <div class="pdt-title">
