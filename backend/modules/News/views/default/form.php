@@ -59,11 +59,14 @@ use yii\helpers\Html;
                 <div class="row cl">
                     <div class="formControls col-xs-8 col-sm-9">
                         <?php echo '<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>' ?>
-                        <?= $form->field($model, 'content')->textInput(['id' => 'content'])->label(false); ?>
+                        <div style="display: none">
+                            <?= $form->field($model, 'content')->textInput(['id' => 'content'])->label(false); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <?= Html::submitButton('保存', ['class' => 'btn btn-primary radius', 'name' => 'submit-button']) ?>
@@ -125,11 +128,14 @@ use yii\helpers\Html;
                     <div class="row cl">
                         <div class="formControls col-xs-8 col-sm-9">
                             <?php echo '<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>' ?>
-                            <?= $form->field($model, 'content')->textInput(['id' => 'content'])->label(false); ?>
+                            <div style="display: none">
+                                <?= $form->field($model, 'content')->textInput(['id' => 'content'])->label(false); ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <br>
             <div class="row cl">
                 <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                     <?= Html::submitButton('保存', ['class' => 'btn btn-primary radius', 'name' => 'submit-button']) ?>

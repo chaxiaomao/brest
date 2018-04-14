@@ -65,9 +65,13 @@ class DefaultController extends Controller
             $model->model = $data['Product']['model'];
             $model->power = $data['Product']['power'];
             $model->carton_size = $data['Product']['carton_size'];
+            $model->content = $data['Product']['content'];
             $model->save();
-            return $this->render('form', ['model' => $model, 'arr' => $this->getCategories()]);
+            echo '<script>alert("保存成功!")</script>';
+        } else {
+            echo '<script>alert("保存失败!")</script>';
         }
+        return $this->render('form', ['model' => $model, 'arr' => $this->getCategories()]);
     }
 
     public function actionRemove()

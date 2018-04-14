@@ -8,10 +8,6 @@
 $theme = $this->theme;
 $assets = \frontend\themes\brest\AppAsset::register($this);
 $css = '
-.ban-img1{display:inline-block; background-size: cover; background-image:url('.$assets->baseUrl.'/upload/BAN4.jpg);width:999px;height:576px;margin:10px;background-position:center;background-repeat:no-repeat;}
-.ban-img2{display:inline-block; background-size: cover; background-image:url('.$assets->baseUrl.'/upload/BAN1.jpg);width:999px;height:576px;margin:10px;background-position:center;background-repeat:no-repeat;}
-.ban-img3{display:inline-block; background-size: cover; background-image:url('.$assets->baseUrl.'/upload/BAN2.jpg);width:999px;height:576px;margin:10px;background-position:center;background-repeat:no-repeat;}
-.ban-img4{display:inline-block; background-size: cover; background-image:url('.$assets->baseUrl.'/upload/BAN3.jpg);width:999px;height:576px;margin:10px;background-position:center;background-repeat:no-repeat;}
 .swiper-container {
         width: 1170px;
         height: 100%;
@@ -45,16 +41,20 @@ $this->registerCss($css);
 <div class="swiper-container swiper-container-h">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="ban-img1"></div>
+<!--            <div class="ban-img1"></div>-->
+            <img src="<?= "$assets->baseUrl/upload/BAN4.jpg" ?>">
         </div>
         <div class="swiper-slide">
-            <div class="ban-img2"></div>
+<!--            <div class="ban-img2"></div>-->
+            <img src="<?= "$assets->baseUrl/upload/BAN1.jpg" ?>">
         </div>
         <div class="swiper-slide">
-            <div class="ban-img3"></div>
+<!--            <div class="ban-img3"></div>-->
+            <img src="<?= "$assets->baseUrl/upload/BAN2.jpg" ?>">
         </div>
         <div class="swiper-slide">
-            <div class="ban-img4"></div>
+<!--            <div class="ban-img4"></div>-->
+            <img src="<?= "$assets->baseUrl/upload/BAN3.jpg" ?>">
         </div>
     </div>
     <!-- Add Pagination -->

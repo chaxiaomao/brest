@@ -10,8 +10,12 @@ use frontend\themes\brest\AppAsset;
 
 $assets = AppAsset::register($this);
 $this->title = $model->label;
-$this->registerCss(".mainPhoto .go li .tu, .mainPhoto .go li .tu img{height:100%}
-.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}");
+$css = '
+.mainPhoto .go li .tu, .mainPhoto .go li .tu img{height:100%}
+.scd .scd_top span{color:#F9A519;border-bottom:3px solid #F9A519}.pst,.pst a{color:gray;}
+.panel-body img{width:100%;}
+';
+$this->registerCss($css);
 ?>
 <div class="space_hx">&nbsp;</div>
 <div class="scd clearfix">
@@ -50,6 +54,11 @@ $this->registerCss(".mainPhoto .go li .tu, .mainPhoto .go li .tu img{height:100%
                         <p><?= Yii::t('app.t2', 'MODEL') ?>：<?= $model->model ?></p>
                         <p><?= Yii::t('app.t2', 'POWER') ?>：<?= $model->power ?></p>
                         <p><?= Yii::t('app.t2', 'CARTON SIZE') ?>： <?= $model->carton_size ?></p>
+                    </div>
+                </div>
+                <div class="panel panel-default" style="width:540px;">
+                    <div class="panel-body">
+                        <?= $model->content ?>
                     </div>
                 </div>
             </div>

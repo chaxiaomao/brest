@@ -11,6 +11,8 @@ use yii\widgets\ActiveForm;
 
 $this->registerCss(".form-group{width:50%;}.cover-inp{display:none;}.upload-div{position:relative;}.upload-btn{
 position:absolute;bottom:0;}");
+
+\backend\themes\hui\UeditorAsset::register($this);
 ?>
 <div class="page-container">
     <?php if ($model->isNewRecord): ?>
@@ -58,7 +60,7 @@ position:absolute;bottom:0;}");
         </div>
         <br/>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>图片：</label>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>封面图片：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="upload-div">
                     <img id="preview" style="width: 150px;height: 150px;" src="/images/ic_add.png" onclick="selectImg()">
@@ -69,6 +71,20 @@ position:absolute;bottom:0;}");
                 <?= $form->field($model, 'img_path')->textInput(['id' => 'cover_path'])->label(false) ?>
             </div>
         </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">详情：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div class="row cl">
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <?php echo '<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>' ?>
+                        <div style="display: none">
+                            <?= $form->field($model, 'content')->textInput(['id' => 'content'])->label(false); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <?= Html::submitButton('保存', ['class' => 'btn btn-primary radius', 'name' => 'submit-button']) ?>
@@ -123,7 +139,7 @@ position:absolute;bottom:0;}");
         </div>
         <br/>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>图片：</label>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>封面图片：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <div class="upload-div">
                     <img id="preview" style="width: 150px;height: 150px;" src="<?= $model->img_path ?>" onclick="selectImg()" />
@@ -135,6 +151,20 @@ position:absolute;bottom:0;}");
             </div>
         </div>
         <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">详情：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <div class="row cl">
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <?php echo '<script id="editor" type="text/plain" style="width:100%;height:400px;"></script>' ?>
+                        <div style="display: none">
+                            <?= $form->field($model, 'content')->textInput(['id' => 'content'])->label(false); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <?= Html::submitButton('保存', ['class' => 'btn btn-primary radius', 'name' => 'submit-button']) ?>
             </div>
@@ -145,6 +175,16 @@ position:absolute;bottom:0;}");
 
 </div>
 <script type="text/javascript">
+    var ue = UE.getEditor('editor');
+    ue.addListener("blur",function(){
+        var arr =(UE.getEditor('editor').getContent());
+        $("#content").val(arr);
+    });
+    ue.addListener("ready", function () {
+        // editor准备好之后才可以使用
+        ue.setContent($("#content").val());
+    });
+
     function selectImg() {
         //触发选择文件的伪点击事件,一定要return
         return $("#imgFile").click();

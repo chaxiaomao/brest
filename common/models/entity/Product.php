@@ -20,6 +20,7 @@ class Product extends \yii\db\ActiveRecord
         return [
             [['status','category_id'], 'integer'],
             [['label', 'model', 'power', 'carton_size'], 'string', 'max' => 255],
+            [['content'], 'string', 'max' => 20000],
             [['img_path'], 'string'],
             [['created_at', 'updated_at'], 'default', 'value' => date('Y-m-d H:i:s')],
             [['label', 'model', 'power', 'carton_size', 'category_id', ], 'required'],
@@ -40,6 +41,7 @@ class Product extends \yii\db\ActiveRecord
             'power' => "功率",
             'carton_size' => "机箱大小",
             'img_path' => "图片路径",
+            'content' => "内容",
             'created_at' => "创建时间",
             'updated_at' => "更新时间",
         ];
