@@ -70,7 +70,7 @@ position:absolute;bottom:0;}");
                 <input class="cover-inp" type="file" id="imgFile" name="imgFile" value="" title="上传图片" onchange="imgPreview(this)" />
                 <div style="display: none">
                     <?= $form->field($model, 'img_path')->textInput(['id' => 'cover_path'])->label(false) ?>
-                </div>s
+                </div>
             </div>
         </div>
         <div class="row cl">
