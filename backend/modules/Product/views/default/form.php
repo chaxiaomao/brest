@@ -67,10 +67,10 @@ position:absolute;bottom:0;}");
                     <button id="img-upload" style="display: none" type="button" class="btn btn-success upload-btn"  onclick="imgUpload()">开始上传</button>
                 </div>
                 <span id="upload_tip"></span>
+                <input class="cover-inp" type="file" id="imgFile" name="imgFile" value="" title="上传图片" onchange="imgPreview(this)" />
                 <div style="display: none">
-                    <input class="cover-inp" type="file" id="imgFile" name="imgFile" value="" title="上传图片" onchange="imgPreview(this)" />
+                    <?= $form->field($model, 'img_path')->textInput(['id' => 'cover_path'])->label(false) ?>
                 </div>
-                <?= $form->field($model, 'img_path')->textInput(['id' => 'cover_path'])->label(false) ?>
             </div>
         </div>
         <div class="row cl">
@@ -148,10 +148,10 @@ position:absolute;bottom:0;}");
                     <button id="img-upload" style="display: none" type="button" class="upload-btn btn btn-success"  onclick="imgUpload()">开始上传</button>
                 </div>
                 <span id="upload_tip"></span>
+                <input class="cover-inp" type="file" id="imgFile" name="imgFile" value="" title="上传图片" onchange="imgPreview(this)" />
                 <div style="display: none">
-                    <input class="cover-inp" type="file" id="imgFile" name="imgFile" value="" title="上传图片" onchange="imgPreview(this)" />
+                    <?= $form->field($model, 'img_path')->textInput(['id' => 'cover_path'])->label(false) ?>
                 </div>
-                <?= $form->field($model, 'img_path')->textInput(['id' => 'cover_path'])->label(false) ?>
             </div>
         </div>
         <div class="row cl">
