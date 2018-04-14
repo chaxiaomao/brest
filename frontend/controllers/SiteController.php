@@ -78,8 +78,9 @@ class SiteController extends Controller
         Remote::getRemoteInformation();
         $model = Product::find()
             ->where(['status' => 0])
+            ->orderBy('created_at DESC')
             ->offset(0)
-            ->limit(8)
+            ->limit(16)
             ->all();
         return $this->render('index', [
             'model' => $model,
